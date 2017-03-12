@@ -4,7 +4,7 @@ body {
   justify-content: center;
   height: 100vh;
   align-items: center;
-  background: #e6e6e6; }
+  background: rgba(88, 184, 157, 0.9); }
   body input[type=checkbox]:after {
     padding-right: 5em;
     background-color: red;

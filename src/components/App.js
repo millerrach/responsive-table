@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
+import Button from './Button';
 import '../style/css/App.css';
 
 class App extends Component {
@@ -12,17 +11,16 @@ class App extends Component {
             {name: 'Pizza', origin: 'Italy', details: 'Organic', price: '14 Euro'},
             {name: 'Sausage', origin: 'Austria', details: 'Organic', price: '8 Euro'}
         ]
-        let width = window.innerWidth;
-        let list = document.querySelectorAll('input[type=checkbox]');
-        let origin = document.querySelectorAll('.origin');
-        let details = document.querySelectorAll('.details')
-        console.log(details);
-
-        list.forEach(item => {
-            if (item.checked = true) {
-                console.log('checked');
-            }
-        });
+        // let width = window.innerWidth;
+        // let list = document.querySelectorAll('input[type=checkbox]');
+        // let origin = document.querySelectorAll('.origin');
+        // let details = document.querySelectorAll('.details')
+        //
+        // list.forEach(item => {
+        //     if (item.checked = true) {
+        //         console.log('checked');
+        //     }
+        // });
         let tableHeader = tableHead.map((item, i) => <th key={i}>{item}</th>);
         let tableData = data.map((item, i) => {
             return (
@@ -37,16 +35,19 @@ class App extends Component {
         return (
             <div className="App">
                 <div id="tableContainer">
-                    <table>
-                        <thead>
-                        <tr>
-                            {tableHeader}
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {tableData}
-                        </tbody>
-                    </table>
+                    <Button />
+                    <div id="table">
+                        <table>
+                            <thead>
+                            <tr>
+                                {tableHeader}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {tableData}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         )
