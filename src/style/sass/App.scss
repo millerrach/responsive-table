@@ -7,7 +7,7 @@ body {
    justify-content: center;
    height: 100vh;
   align-items: center;
-  background: $opacGreen;
+  background: $lightGray;
   input[type=checkbox]:after {
     padding-right: 5em;
     background-color: red;
@@ -48,7 +48,6 @@ body {
   }
 }
 
-
 /* Responsive */
 
 @media (max-width: 400px) {
@@ -63,13 +62,11 @@ body {
   }
 }
 
-.btn {
+#button {
   background-color: $opacGreen;
-  color: white;
-  margin-bottom: 1em;
-  // float: right;
-}
-
-.remove {
-  display: none;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 6px;
+  height: 30px;
+  width: 30px;
 }

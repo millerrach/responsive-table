@@ -3,6 +3,18 @@ import Button from './Button';
 import '../style/css/App.css';
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            selected: []
+        }
+    }
+    selection(selected) {
+        this.setState({
+            selected
+        });
+        console.log(selected, this.state.selected);
+    }
     render() {
         let tableHead = ['Dish', 'Origin', 'Details', 'Price'];
         let data = [
@@ -11,17 +23,7 @@ class App extends Component {
             {name: 'Pizza', origin: 'Italy', details: 'Organic', price: '14 Euro'},
             {name: 'Sausage', origin: 'Austria', details: 'Organic', price: '8 Euro'}
         ]
-        // let width = window.innerWidth;
-        // let list = document.querySelectorAll('input[type=checkbox]');
-        // let origin = document.querySelectorAll('.origin');
-        // let details = document.querySelectorAll('.details')
-        //
-        // list.forEach(item => {
-        //     if (item.checked = true) {
-        //         console.log('checked');
-        //     }
-        // });
-        let tableHeader = tableHead.map((item, i) => <th key={i}>{item}</th>);
+        let tableHeader = tableHead.map((item, i) => <th key={i} className={item.toLowerCase()}>{item}</th>);
         let tableData = data.map((item, i) => {
             return (
                 <tr key={i}>
@@ -35,7 +37,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div id="tableContainer">
-                    <Button />
+                    <Button selection={this.selection.bind(this)} selected={this.state.selected} />
                     <div id="table">
                         <table>
                             <thead>

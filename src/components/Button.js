@@ -8,25 +8,24 @@ import Sort from 'material-ui/svg-icons/content/sort'
 injectTapEventPlugin();
 
 export default class IconMenuExampleControlled extends Component {
-    state = {
-        valueSingle: '3',
-        valueMultiple: ['3', '5'],
-    };
 
     handleChangeMultiple = (event, value) => {
-        this.setState({
-            valueMultiple: value,
-        });
+        this.props.selection(value);
     };
 
     render() {
+        const iconStyles = {
+            float: 'right',
+            display: 'flex',
+            justifyContent: 'flex-end',
+        };
         return (
             <MuiThemeProvider>
-                <div>
+                <div id="btn">
                     <IconMenu
-                        iconButtonElement={<IconButton><Sort /></IconButton>}
+                        iconButtonElement={<IconButton style={iconStyles}><Sort color="#58B89D" hoverColor="rgb(255, 64, 129)"/></IconButton>}
                         onChange={this.handleChangeMultiple}
-                        value={this.state.valueMultiple}
+                        value={this.props.selected}
                         multiple={true}
                     >
                         <MenuItem value="1" primaryText="Origin" />
