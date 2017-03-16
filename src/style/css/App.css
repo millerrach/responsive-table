@@ -28,7 +28,7 @@ body {
       body #tableContainer table td {
         width: 12em;
         border-top: 1px solid rgba(199, 198, 196, 0.2); }
-      body #tableContainer table tr:nth-child(even) {
+      body #tableContainer table .tableBody:nth-child(odd) {
         background: rgba(171, 206, 226, 0.1); }
     body #tableContainer table,
     body #tableContainer th,
