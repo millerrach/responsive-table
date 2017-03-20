@@ -15,13 +15,11 @@ export default class IconMenuExampleControlled extends Component {
 
     render() {
         const iconStyles = {
-            float: 'right',
-            display: 'flex',
-            justifyContent: 'flex-end',
+            paddingTop: 0,
         };
         return (
             <MuiThemeProvider>
-                <div id="btn">
+                <div id="btnContainer">
                     <IconMenu
                         iconButtonElement={<IconButton style={iconStyles}><Sort color="#58B89D" hoverColor="rgb(255, 64, 129)"/></IconButton>}
                         onChange={this.handleChangeMultiple}

@@ -19,7 +19,7 @@ class App extends Component {
             {name: 'Gelato', origin: 'Italy', details: 'Organic', price: '4 Euro'},
             {name: 'Hamburger', origin: 'Germany', details: 'Grass Fed', price: '10 Euro'},
             {name: 'Pizza', origin: 'Italy', details: 'Organic', price: '14 Euro'},
-            {name: 'Sausage', origin: 'Austria', details: 'Organic', price: '8 Euro'}
+            {name: 'Sausage', origin: 'Austria', details: 'Biodynamic', price: '8 Euro'}
         ]
         let select = this.state.selected;
         let one = true;
@@ -49,8 +49,8 @@ class App extends Component {
                             <thead>
                             <tr>
                                 <th>Dish</th>
-                                {one ? <th>Origin</th> : null}
-                                {two ? <th>Details</th> : null}
+                                {one ? <th className="origin">Origin</th> : null}
+                                {two ? <th className="details">Details</th> : null}
                                 {three ? <th>Price</th> : null}
                             </tr>
                             </thead>

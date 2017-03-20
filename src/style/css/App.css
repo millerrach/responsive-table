@@ -21,7 +21,7 @@ body {
       font-weight: 700; }
     body #tableContainer table {
       border-collapse: collapse;
-      border-spacing: 0px; }
+      border-spacing: 0; }
       body #tableContainer table th {
         text-align: left;
         width: 12em; }
@@ -34,6 +34,11 @@ body {
     body #tableContainer th,
     body #tableContainer td {
       padding: 5px; }
+
+/* Button container */
+#btnContainer {
+  display: flex;
+  justify-content: flex-end; }
 
 /* Responsive */
 @media (max-width: 400px) {

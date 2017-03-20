@@ -27,7 +27,7 @@ body {
     }
     table {
       border-collapse: collapse;
-      border-spacing: 0px;
+      border-spacing: 0;
       th {
         text-align: left;
         width: 12em;
@@ -46,6 +46,13 @@ body {
       padding: 5px;
     }
   }
+}
+
+/* Button container */
+
+#btnContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Responsive */
