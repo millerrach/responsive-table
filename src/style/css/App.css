@@ -5,10 +5,6 @@ body {
   height: 100vh;
   align-items: center;
   background: #e6e6e6; }
-  body input[type=checkbox]:after {
-    padding-right: 5em;
-    background-color: red;
-    border: 3px solid red; }
   body li {
     margin-top: .5em;
     margin-left: .75em; }
@@ -25,9 +21,13 @@ body {
       body #tableContainer table th {
         text-align: left;
         width: 12em; }
+      body #tableContainer table th:last-child {
+        width: 8em; }
       body #tableContainer table td {
         width: 12em;
         border-top: 1px solid rgba(199, 198, 196, 0.2); }
+      body #tableContainer table td:last-child {
+        width: 8em; }
       body #tableContainer table .tableBody:nth-child(odd) {
         background: rgba(171, 206, 226, 0.1); }
     body #tableContainer table,
@@ -47,12 +47,5 @@ body {
 @media (max-width: 600px) {
   .details {
     display: none; } }
-#button {
-  background-color: rgba(88, 184, 157, 0.9);
-  display: inline-block;
-  border-radius: 5px;
-  padding: 6px;
-  height: 30px;
-  width: 30px; }
 
 /*# sourceMappingURL=App.css.map */

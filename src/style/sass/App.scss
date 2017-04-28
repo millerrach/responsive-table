@@ -1,18 +1,11 @@
-$green: #58B89D;
 $lightGray: #e6e6e6;
-$opacGreen: rgba(88, 184, 157, .9);
 body {
   font-family: 'Roboto', sans-serif;
-   display: flex;
-   justify-content: center;
-   height: 100vh;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
   align-items: center;
   background: $lightGray;
-  input[type=checkbox]:after {
-    padding-right: 5em;
-    background-color: red;
-    border: 3px solid red;
-  }
   li {
     margin-top: .5em;
     margin-left: .75em;
@@ -32,9 +25,15 @@ body {
         text-align: left;
         width: 12em;
       }
+      th:last-child {
+        width: 8em;
+      }
       td {
         width: 12em;
         border-top: 1px solid rgba(199, 198, 196, .2);
+      }
+      td:last-child {
+        width: 8em;
       }
       .tableBody:nth-child(odd) {
         background: rgba(171, 206, 226, .1);
@@ -67,13 +66,4 @@ body {
   .details {
     display: none;
   }
-}
-
-#button {
-  background-color: $opacGreen;
-  display: inline-block;
-  border-radius: 5px;
-  padding: 6px;
-  height: 30px;
-  width: 30px;
 }
